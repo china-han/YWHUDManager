@@ -208,7 +208,7 @@
     }];
 }
 
-#pragma mark - 警告文字
+#pragma mark - 文字
 -(void)showText{
     [HUDManager showTextHud:@"这是展示的文字"];
 }
