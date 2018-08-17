@@ -79,7 +79,7 @@
 		5C21C29E2122AAB1002352C5 /* YWHUDManager */ = {
 			isa = PBXGroup;
 			children = (
-				5CF9F34D212578420069374C /* YWHudManaget */,
+				5CF9F34D212578420069374C /* YWHudManager */,
 				5C21C29F2122AAB1002352C5 /* AppDelegate.h */,
 				5C21C2A02122AAB1002352C5 /* AppDelegate.m */,
 				5C21C2A22122AAB1002352C5 /* ViewController.h */,
@@ -93,14 +93,14 @@
 			path = YWHUDManager;
 			sourceTree = "<group>";
 		};
-		5CF9F34D212578420069374C /* YWHudManaget */ = {
+		5CF9F34D212578420069374C /* YWHudManager */ = {
 			isa = PBXGroup;
 			children = (
 				5C21C2B52122B2BD002352C5 /* HUDManager.h */,
 				5C21C2B62122B2BD002352C5 /* HUDManager.m */,
 				5C21C2B82122CAE1002352C5 /* MBProgressHUD.bundle */,
 			);
-			path = YWHudManaget;
+			path = YWHudManager;
 			sourceTree = "<group>";
 		};
 		E939E1C826EDD68578B92E58 /* Frameworks */ = {
