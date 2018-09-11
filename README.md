@@ -21,6 +21,10 @@
 * 显示自定义视图和按钮                                                                   
 ![image](https://github.com/china-han/YWHUDManager/blob/master/img/10.gif) 
 
+# Requirements
+* Xcode 9.4.1
+* iOS 8.0
+
 # 用法
 下载zip,把其中的YWHudManager拖入到你的项目中，记得点击允许copy
 导入HUDManager.h
