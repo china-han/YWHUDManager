@@ -90,6 +90,10 @@ static CGFloat   YWAlpha = 0.5f;
 }
 
 #pragma mark - 加载显示
++(void)showLoading{
+    [self showLoadingHud:nil];
+}
+
 + (void)showLoadingHud:(NSString *)message{
     [self showLoadingHud:message onView:nil];
 }
@@ -226,6 +230,15 @@ static CGFloat   YWAlpha = 0.5f;
     
     hud.label.text = message;
     hud.label.textColor = [UIColor whiteColor];
+    //如果只想显示一行，后面的用。。。显示，可以注释这一行
+    hud.label.numberOfLines = 0;
+    
+    //detailsLabel和上面的lable差不多，如果想用detailsLabel可以上面设置lable的注释
+    //    hud.detailsLabel.text = message;
+    //    hud.detailsLabel.textColor = [UIColor whiteColor];
+    //    hud.detailsLabel.font = [UIFont boldSystemFontOfSize:17];
+    
+    
     hud.contentColor = [UIColor whiteColor];
     hud.completionBlock = completionBlock;
     if (isShowMaskView) {

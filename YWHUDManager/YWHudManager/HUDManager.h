@@ -93,6 +93,11 @@ typedef NS_ENUM(NSInteger,HUDStateType) {   //显示状态类型
 
 #pragma mark - 加载显示
 /**
+ 弹出 菊花 HUD （文字）文字默认为loading...
+ */
++ (void)showLoading;
+
+/**
  弹出 菊花 HUD （文字）
  
  @param message          文字，如果传nil，默认为loading...,如果不用可以直接修改
