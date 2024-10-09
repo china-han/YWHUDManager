@@ -255,6 +255,7 @@
 
 -(void)showCustomViewMaskViewTimeToView{
     UILabel *lable = [[UILabel alloc]init];
+    lable.textColor = [UIColor whiteColor];
     lable.text = @"自定义leble";
     [HUDManager showHudCustomView:lable isShowMaskView:YES afterDelay:2 onView:self.view];
 }

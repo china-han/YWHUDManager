@@ -20,7 +20,7 @@
 
 
 /* 默认网络提示*/
-static NSString         *YWLoadingMessage = @"loading...";
+static NSString         *YWLoadingMessage = @"";
 
 /* 默认成功提示*/
 static NSString         *YWSuccessMessage = @"加载成功";
@@ -92,6 +92,10 @@ static CGFloat   YWAlpha = 0.5f;
 #pragma mark - 加载显示
 +(void)showLoading{
     [self showLoadingHud:nil];
+}
+
++ (void)showLoadingOnView:(UIView *)view{
+    [self showLoadingHud:nil onView:nil];
 }
 
 + (void)showLoadingHud:(NSString *)message{
@@ -225,8 +229,7 @@ static CGFloat   YWAlpha = 0.5f;
     }
     //hud.mode = MBProgressHUDModeCustomView;
    
-    hud.bezelView.backgroundColor = [UIColor blackColor];
-    hud.bezelView.style = MBProgressHUDBackgroundStyleBlur;
+
     
     hud.label.text = message;
     hud.label.textColor = [UIColor whiteColor];
@@ -239,12 +242,17 @@ static CGFloat   YWAlpha = 0.5f;
     //    hud.detailsLabel.font = [UIFont boldSystemFontOfSize:17];
     
     
-    hud.contentColor = [UIColor whiteColor];
+ 
     hud.completionBlock = completionBlock;
     if (isShowMaskView) {
         hud.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
         hud.backgroundView.color = [UIColor colorWithWhite:YWWhite alpha:YWAlpha];
     }
+    
+    hud.bezelView.color = [UIColor blackColor];
+    hud.contentColor = [UIColor whiteColor];
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+    
     // 隐藏的时候从父控件中移除
     hud.removeFromSuperViewOnHide = YES;
     // delay秒后隐藏
@@ -268,12 +276,10 @@ static CGFloat   YWAlpha = 0.5f;
         hud.mode = MBProgressHUDModeCustomView;
         hud.customView  = customImgView;
     }
-    hud.bezelView.backgroundColor = [UIColor blackColor];
-    hud.bezelView.style = MBProgressHUDBackgroundStyleBlur;
+
     
     hud.label.text = message;
     hud.label.textColor = [UIColor whiteColor];
-    hud.contentColor = [UIColor whiteColor];
     hud.completionBlock = completionBlock;
     if (btnTitle) {
         [hud.button setTitle:btnTitle forState:UIControlStateNormal];
@@ -294,6 +300,10 @@ static CGFloat   YWAlpha = 0.5f;
         hud.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
         hud.backgroundView.color = [UIColor colorWithWhite:YWWhite alpha:YWAlpha];
     }
+    
+    hud.bezelView.color = [UIColor blackColor];
+    hud.contentColor = [UIColor whiteColor];
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
     // 隐藏的时候从父控件中移除
     hud.removeFromSuperViewOnHide = YES;
     // delay秒后隐藏
